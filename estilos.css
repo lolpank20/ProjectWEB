@@ -1,0 +1,87 @@
+
+
+.card-container {
+    width: 300px;
+    background: linear-gradient(to left, hsl(0, 0%, 44%), #ffffff);
+    border: 1px solid #ccc;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.profile-pic {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; 
+    border: 2px solid #c2bebe; 
+    margin-bottom: 15px; 
+}
+
+
+.name {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+    background: linear-gradient(45deg, #ffdd7e, #ffd375, #ffbb63);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.info {
+    font-size: 16px;
+    color: #000000;
+    margin: 5px 0;
+}
+
+
+.description {
+    font-size: 14px;
+    color: #000000;
+    text-align: justify;
+    margin: 15px 0;
+}
+
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.social-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #0077b5; 
+}
+
+.social-links a[href*="twitter.com"] {
+    color: #1DA1F2; 
+}
+
+.social-links a[href*="github.com"] {
+    color: #333; 
+}
+
+.social-links a:hover {
+    opacity: 0.7;
+}
+
+.btnContainer{
+    background-color: red;
+}
+.btnHover:hover{
+    background-color: rgb(236, 130, 10);
+    transition: ease 1.5s;
+    cursor: pointer;
+
+}
