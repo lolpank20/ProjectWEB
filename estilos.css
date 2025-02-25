@@ -1,29 +1,43 @@
 
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ffffff, #808080);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
 .card-container {
     width: 300px;
     background: linear-gradient(to left, hsl(0, 0%, 44%), #ffffff);
     border: 1px solid #ccc;
-
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
     padding: 20px;
     text-align: center;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+body.loaded .card-container {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-
 .profile-pic {
-    width: 200px; 
-    height: 200px; 
-    border-radius: 50%; 
-    border: 2px solid #c2bebe; 
-    margin-bottom: 15px; 
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #c2bebe;
+    margin-bottom: 15px;
 }
 
 
 .name {
     font-size: 24px;
-    color: #333;
     margin: 0;
     background: linear-gradient(45deg, #ffdd7e, #ffd375, #ffbb63);
     -webkit-background-clip: text;
@@ -32,56 +46,55 @@
 }
 
 
-.info {
+.info, .description {
     font-size: 16px;
-    color: #000000;
+    color: #000;
     margin: 5px 0;
 }
 
-
 .description {
     font-size: 14px;
-    color: #000000;
     text-align: justify;
     margin: 15px 0;
 }
 
-
 .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
     list-style: none;
-    padding: 0;
     margin: 0;
-    text-align: center;
 }
 
-.social-links li {
-    display: inline;
-    margin: 0 10px;
-}
 
-.social-links a {
+.social-link {
     text-decoration: none;
-    color: #0077b5; 
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white !important;  
+    text-align: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: inline-block;
 }
 
-.social-links a[href*="twitter.com"] {
-    color: #1DA1F2; 
+
+.social-link[href*="linkedin.com"] {
+    background: #0077b5; 
 }
 
-.social-links a[href*="github.com"] {
-    color: #333; 
+.social-link[href*="instagram.com"] {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); 
 }
 
-.social-links a:hover {
-    opacity: 0.7;
+.social-link[href*="github.com"] {
+    background: #333; 
 }
 
-.btnContainer{
-    background-color: red;
+.social-link:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
 }
-.btnHover:hover{
-    background-color: rgb(236, 130, 10);
-    transition: ease 1.5s;
-    cursor: pointer;
 
-}
