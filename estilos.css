@@ -98,3 +98,17 @@ body.loaded .card-container {
     opacity: 0.9;
 }
 
+#change-info-btn {
+    background-color: #0077b5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#change-info-btn:hover {
+    background-color: #005f8a;
+}
