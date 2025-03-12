@@ -3,30 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carta de Presentación</title>
+    <title>Portafolio - Diego Alejandro</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <div class="card-container">
-        <img src="ale.jpg" alt="Foto de Diego Alejandro" class="profile-pic">
-        
-        <h1 class="name">Diego Alejandro Barrera</h1>
-        <p class="info">Bienvenido a mis 15</p>
-        <p class="info">Estudiante de la Universidad EAN</p>
-        <p class="info">Carrera: Ingeniería de Sistemas</p>
-        <p class="info">Semestre: Séptimo</p>
-        <p class="info">Edad: 21 años</p>
-        <p class="description">
-            Soy un apasionado estudiante de ingeniería de sistemas con conocimientos en Python y JavaScript. Actualmente estoy cursando mi séptimo semestre en la Universidad EAN y busco oportunidades para aplicar mis habilidades en proyectos desafiantes.
-        </p>
-        <ul class="social-links">
-            <li><a class="social-link" href="https://www.linkedin.com/in/diego-alejandro" target="_blank">LinkedIn</a></li>
-            <li><a class="social-link" href="https://www.instagram.com/alejo.bar_/" target="_blank">Instagram</a></li>
-            <li><a class="social-link" href="https://github.com/diego-alejandro" target="_blank">GitHub</a></li>
-        </ul>
     
-        <button id="change-info-btn">Cambiar Información</button>
-    </div>
+    <!-- Sección 1: Portada -->
+    <section id="hero">
+        <div class="hero-content">
+            <img src="ale.jpg" alt="Foto de perfil" class="profile-pic">
+            <h1>Diego Alejandro Barrera</h1>
+            <p>Estudiante de Ingeniería de Sistemas | Apasionado por la Tecnología</p>
+        </div>
+    </section>
+
+    <!-- Sección 2: Sobre Mí -->
+    <section class="content-section">
+        <div class="card">
+            <h2>Sobre mí</h2>
+            <p>Actualmente curso el séptimo semestre de Ingeniería de Sistemas en la Universidad EAN. Me especializo en desarrollo backend con Python y JavaScript.</p>
+        </div>
+    </section>
+
+    <!-- Sección 3: Contacto -->
+    <section class="content-section">
+        <div class="card">
+            <h2>Contacto</h2>
+            <p><strong>Universidad:</strong> EAN</p>
+            <p><strong>Semestre:</strong> Séptimo</p>
+            <p><strong>Edad:</strong> 21 años</p>
+            <div class="social-links">
+                <a class="social-link" href="https://www.linkedin.com/in/diego-alejandro" target="_blank">LinkedIn</a>
+                <a class="social-link" href="https://www.instagram.com/alejo.bar_/" target="_blank">Instagram</a>
+                <a class="social-link" href="https://github.com/diego-alejandro" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 4: Habilidades -->
+    <section class="content-section">
+        <h2>Habilidades Técnicas</h2>
+        <div class="skill">
+            <p>Python <span>70%</span></p>
+            <div class="progress-bar"><div class="progress python"></div></div>
+        </div>
+        <div class="skill">
+            <p>JavaScript <span>65%</span></p>
+            <div class="progress-bar"><div class="progress javascript"></div></div>
+        </div>
+        <div class="skill">
+            <p>SQL <span>60%</span></p>
+            <div class="progress-bar"><div class="progress sql"></div></div>
+        </div>
+        <div class="skill">
+            <p>Node.js <span>50%</span></p>
+            <div class="progress-bar"><div class="progress nodejs"></div></div>
+        </div>
+        <div class="skill">
+            <p>HTML & CSS <span>80%</span></p>
+            <div class="progress-bar"><div class="progress htmlcss"></div></div>
+        </div>
+        <div class="skill">
+            <p>Power BI <span>75%</span></p>
+            <div class="progress-bar"><div class="progress powerbi"></div></div>
+        </div>
+        <div class="skill">
+            <p>AWS <span>55%</span></p>
+            <div class="progress-bar"><div class="progress aws"></div></div>
+        </div>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>
