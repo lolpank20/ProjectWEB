@@ -17,3 +17,35 @@ document.addEventListener("DOMContentLoaded", function() {
         alert("¡Los cambios fueron realizados con éxito!");
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll(".fade-in");
+
+    function checkFadeIn() {
+        fadeElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                el.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkFadeIn);
+    checkFadeIn();
+});
+
+
+
+// Menu de navegación
+document.querySelectorAll('#navbar a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        window.scrollTo({
+            top: targetSection.offsetTop - 50, 
+            behavior: 'smooth'
+        });
+    });
+});

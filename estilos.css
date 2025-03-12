@@ -1,16 +1,16 @@
-/* ----- ESTILOS GENERALES ----- */
+
 body {
     font-family: 'Poppins', sans-serif;
-    background: #0d0d0d; /* Fondo oscuro */
+    background: #0d0d0d; 
     color: #ffffff;
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth; /* Efecto suave en el scroll */
+    scroll-behavior: smooth; 
 }
 
-/* ----- SECCIONES GENERALES ----- */
+
 section {
-    min-height: 100vh;  /* Cada sección ocupa el 100% de la pantalla */
+    min-height: 100vh;  
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,7 +19,7 @@ section {
     padding: 50px 20px;
 }
 
-/* ----- SECCIÓN PORTADA ----- */
+
 #hero {
     background: #1a1a1a;
     display: flex;
@@ -73,6 +73,7 @@ section {
     max-width: 1000px;
 }
 
+/* ----- TARJETAS DE INFORMACIÓN ----- */
 .card {
     background: #1a1a1a;
     border: 2px solid #00ff99;
@@ -83,7 +84,11 @@ section {
     text-align: center;
     flex: 1;
     min-width: 280px;
+    max-height: 400px; 
+    height: auto; 
+    overflow: hidden; 
 }
+
 
 .card h2 {
     color: #00ff99;
@@ -213,4 +218,69 @@ h2 {
     .card {
         width: 100%;
     }
+}
+
+
+/* Animación de entrada suave */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Cuando el elemento es visible, aplicamos la animación */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Menu de Navegación */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 10px 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+#navbar ul li {
+    display: inline;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #00ff99;
+    font-size: 1rem;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+#navbar ul li a:hover {
+    color: #ffffff;
+}
+
+/* Menu de Navegación */
+#hero {
+    background-image: url('ale.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    width: 100%;
 }
