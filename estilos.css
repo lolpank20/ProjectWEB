@@ -281,6 +281,88 @@ section {
     padding-top: 80px; 
 }
 
+
+#hero h1 {
+    color: #e0d8eb;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid #7d6a96;
+    margin-bottom: 15px;
+}
+
+
+.card {
+    background: #1a1a1a;
+    border: 2px solid #9b7ac7;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(162, 89, 255, 0.3);
+    width: 350px;
+    text-align: center;
+}
+
+.card h2 {
+    color: #726286;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+
+.social-link {
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    background: #a259ff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: inline-block;
+}
+
+
+.skills-container {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    background: #1a1a1a;
+    border: 2px solid #a259ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(162, 89, 255, 0.3);
+}
+
+h2 {
+    text-align: center;
+    color: #a259ff;
+    margin-bottom: 20px;
+}
+
+
+.progress {
+    height: 100%;
+    background: #a259ff;
+}
+
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #a259ff;
+    font-size: 1rem;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+
+
 .experience-container {
     display: flex;
     justify-content: center;
@@ -296,7 +378,7 @@ section {
     border: 2px solid var(--primary-color);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(162, 89, 255, 0.3);
+    box-shadow: 0 4px 10px rgba(167, 118, 231, 0.3);
     max-width: 350px;
     text-align: center;
 }
