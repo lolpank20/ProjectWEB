@@ -67,10 +67,12 @@ section {
 .info-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px; /* Espacio entre tarjetas */
+    flex-wrap: wrap; /* Permite que se acomoden bien en pantallas pequeñas */
     width: 90%;
-    max-width: 1000px;
+    max-width: 800px;
+    margin: auto;
 }
 
 /* ----- TARJETAS DE INFORMACIÓN ----- */
@@ -80,13 +82,8 @@ section {
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 255, 153, 0.3);
-    max-width: 400px;
+    width: 350px; /* Tamaño fijo para alineación */
     text-align: center;
-    flex: 1;
-    min-width: 280px;
-    max-height: 400px; 
-    height: auto; 
-    overflow: hidden; 
 }
 
 
@@ -193,11 +190,6 @@ h2 {
 
     .card {
         width: 90%;
-        max-width: 350px;
-    }
-
-    .skills-grid {
-        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -269,7 +261,6 @@ h2 {
     color: #ffffff;
 }
 
-/* Menu de Navegación */
 #hero {
     background-image: url('ale.jpg');
     background-size: cover;
@@ -283,4 +274,33 @@ h2 {
     text-align: center;
     padding: 50px;
     width: 100%;
+}
+
+/* Experiencia */
+section {
+    padding-top: 80px; 
+}
+
+.experience-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.experience-card {
+    background: var(--dark-bg);
+    border: 2px solid var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(162, 89, 255, 0.3);
+    max-width: 350px;
+    text-align: center;
+}
+
+.experience-card h3 {
+    color: var(--primary-color);
 }
