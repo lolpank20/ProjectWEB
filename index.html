@@ -42,29 +42,35 @@
 </section>
 
     <!-- Habilidades -->
-    <div class="tab-buttons">
-        <button class="tab-btn active" onclick="showTab('bars')">Barras</button>
-        <button class="tab-btn" onclick="showTab('chart')">Gráfico</button>
-    </div>
-
-    <div id="bars" class="tab-content active">
-        <div class="skills-container">
-            <div class="skill"><p>Python <span>70%</span></p><div class="progress-bar"><div class="progress python"></div></div></div>
-            <div class="skill"><p>JavaScript <span>65%</span></p><div class="progress-bar"><div class="progress javascript"></div></div></div>
-            <div class="skill"><p>SQL <span>60%</span></p><div class="progress-bar"><div class="progress sql"></div></div></div>
-            <div class="skill"><p>Node.js <span>50%</span></p><div class="progress-bar"><div class="progress nodejs"></div></div></div>
-            <div class="skill"><p>HTML & CSS <span>80%</span></p><div class="progress-bar"><div class="progress htmlcss"></div></div></div>
-            <div class="skill"><p>Power BI <span>75%</span></p><div class="progress-bar"><div class="progress powerbi"></div></div></div>
-            <div class="skill"><p>AWS <span>55%</span></p><div class="progress-bar"><div class="progress aws"></div></div></div>
+    <section id="skills" class="content-section fade-in">
+        <h2 id="skills-title">Habilidades Técnicas</h2>
+    
+        <!-- Botones de Tabs -->
+        <div class="tab-buttons">
+            <button class="tab-btn active" onclick="showTab('bars')">Barras</button>
+            <button class="tab-btn" onclick="showTab('chart')">Gráfico</button>
         </div>
-    </div>
-
-    <div id="chart" class="tab-content">
-        <div class="chart-container">
-            <canvas id="skillsChart"></canvas>
+    
+        <!-- Contenedor de Barras de Progreso -->
+        <div id="bars" class="tab-content active">
+            <div class="skills-container">
+                <div class="skill"><p>Python <span>70%</span></p><div class="progress-bar"><div class="progress python"></div></div></div>
+                <div class="skill"><p>JavaScript <span>65%</span></p><div class="progress-bar"><div class="progress javascript"></div></div></div>
+                <div class="skill"><p>SQL <span>60%</span></p><div class="progress-bar"><div class="progress sql"></div></div></div>
+                <div class="skill"><p>Node.js <span>50%</span></p><div class="progress-bar"><div class="progress nodejs"></div></div></div>
+                <div class="skill"><p>HTML & CSS <span>80%</span></p><div class="progress-bar"><div class="progress htmlcss"></div></div></div>
+                <div class="skill"><p>Power BI <span>75%</span></p><div class="progress-bar"><div class="progress powerbi"></div></div></div>
+                <div class="skill"><p>AWS <span>55%</span></p><div class="progress-bar"><div class="progress aws"></div></div></div>
+            </div>
         </div>
-    </div>
-</section>
+    
+        <!-- Contenedor del Gráfico -->
+        <div id="chart" class="tab-content">
+            <div class="chart-container">
+                <canvas id="skillsChart"></canvas>
+            </div>
+        </div>
+    </section>
 
     <!-- Experiencia -->
     <section id="experience" class="content-section fade-in">

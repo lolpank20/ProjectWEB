@@ -203,3 +203,12 @@ canvas {
     display: block;
 }
 
+/* ----- ESTILO PARA EL TÍTULO DE HABILIDADES ----- */
+#skills-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+

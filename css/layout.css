@@ -163,7 +163,6 @@ section {
     object-fit: cover;
 }
 
-/* Texto en Sobre Mí */
 .about-text {
     text-align: left;
     color: #ccc;
@@ -225,5 +224,20 @@ section {
     align-items: center;
     margin: auto; /* Centramos el gráfico */
 }
+/* ----- ESTILO PARA EL CONTENEDOR DE HABILIDADES ----- */
+.tab-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Se expande en la pantalla */
+}
 
-
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%; 
+    max-width: 600px;
+    margin: auto;
+}
