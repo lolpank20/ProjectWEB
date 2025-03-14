@@ -42,8 +42,12 @@
 </section>
 
     <!-- Habilidades -->
-    <section id="skills" class="content-section fade-in">
-        <h2>Habilidades Técnicas</h2>
+    <div class="tab-buttons">
+        <button class="tab-btn active" onclick="showTab('bars')">Barras</button>
+        <button class="tab-btn" onclick="showTab('chart')">Gráfico</button>
+    </div>
+
+    <div id="bars" class="tab-content active">
         <div class="skills-container">
             <div class="skill"><p>Python <span>70%</span></p><div class="progress-bar"><div class="progress python"></div></div></div>
             <div class="skill"><p>JavaScript <span>65%</span></p><div class="progress-bar"><div class="progress javascript"></div></div></div>
@@ -53,7 +57,14 @@
             <div class="skill"><p>Power BI <span>75%</span></p><div class="progress-bar"><div class="progress powerbi"></div></div></div>
             <div class="skill"><p>AWS <span>55%</span></p><div class="progress-bar"><div class="progress aws"></div></div></div>
         </div>
-    </section>
+    </div>
+
+    <div id="chart" class="tab-content">
+        <div class="chart-container">
+            <canvas id="skillsChart"></canvas>
+        </div>
+    </div>
+</section>
 
     <!-- Experiencia -->
     <section id="experience" class="content-section fade-in">
@@ -95,6 +106,10 @@
     </section>
 
     <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+<button id="scrollTop" class="scroll-top">↑</button>
 
 </body>
 </html>

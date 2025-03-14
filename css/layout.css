@@ -173,3 +173,57 @@ section {
     color: var(--primary-color);
     font-size: 1.8rem;
 }
+
+/* Efecto Parallax  */
+#hero {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    transition: background-position 0.1s ease-out;
+}
+
+
+/* ----- BOTONES DE TABS ----- */
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.tab-btn.active {
+    background: white;
+    color: black;
+}
+
+/* ----- CONTENIDO DE TABS ----- */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* ----- CENTRAR EL GRÁFICO ----- */
+.chart-container {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* Centramos el gráfico */
+}
+
+
