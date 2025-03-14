@@ -45,7 +45,7 @@ document.querySelectorAll('#navbar a').forEach(anchor => {
 
         if (targetSection) {
             window.scrollTo({
-                top: targetSection.offsetTop - 60, // Ajustar para que no quede cubierto por el navbar
+                top: targetSection.offsetTop - 60, 
                 behavior: 'smooth'
             });
         }
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
         data: {
             labels: ['Python', 'JavaScript', 'SQL', 'Node.js', 'HTML & CSS', 'Power BI', 'AWS'],
             datasets: [{
-                data: [70, 65, 60, 50, 80, 75, 55], // Valores en porcentaje
+                data: [70, 65, 60, 50, 80, 75, 55], 
                 backgroundColor: [
                     '#00FF99', '#FF5733', '#33B5E5', '#FFEB3B', '#4CAF50', '#FF9800', '#9C27B0'
                 ],
@@ -160,7 +160,6 @@ function showTab(tab) {
     document.querySelector(`[onclick="showTab('${tab}')"]`).classList.add('active');
 }
 
-// Mostrar por defecto las barras
 document.addEventListener("DOMContentLoaded", function() {
     showTab('bars');
 });
@@ -189,3 +188,91 @@ document.addEventListener("DOMContentLoaded", function() {
     showTab('bars');
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const themeButton = document.createElement("button");
+    themeButton.id = "toggle-theme";
+    themeButton.classList.add("theme-btn");
+    themeButton.setAttribute("aria-label", "Toggle light/dark mode");
+    themeButton.innerHTML = "☀️"; // Icono inicial
+    document.body.appendChild(themeButton);
+
+    // Verificar si hay una preferencia guardada
+    if (localStorage.getItem("theme") === "light") {
+        document.body.classList.add("light-mode");
+        themeButton.innerHTML = "🌙"; // Cambia el icono a luna
+    }
+
+    // Evento para alternar modo
+    themeButton.addEventListener("click", function() {
+        document.body.classList.toggle("light-mode");
+
+        if (document.body.classList.contains("light-mode")) {
+            localStorage.setItem("theme", "light");
+            themeButton.innerHTML = "🌙"; // Cambia icono a luna
+        } else {
+            localStorage.setItem("theme", "dark");
+            themeButton.innerHTML = "☀️"; // Cambia icono a sol
+        }
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Botón de cambio de tema
+    const themeButton = document.getElementById("toggle-theme");
+    themeButton.addEventListener("click", function () {
+        document.body.classList.toggle("light-mode");
+        themeButton.textContent = document.body.classList.contains("light-mode") ? "🌙" : "☀️";
+    });
+
+    // Cambio de gráficos
+    const barsChart = document.getElementById("barsChart");
+    const pieChart = document.getElementById("pieChart");
+    const showBars = document.getElementById("showBars");
+    const showPie = document.getElementById("showPie");
+
+    showBars.addEventListener("click", function () {
+        barsChart.style.display = "block";
+        pieChart.style.display = "none";
+    });
+
+    showPie.addEventListener("click", function () {
+        barsChart.style.display = "none";
+        pieChart.style.display = "block";
+    });
+
+    // Configuración del gráfico de pastel
+    const ctx = document.getElementById("skillsChart").getContext("2d");
+    new Chart(ctx, {
+        type: "pie",
+        data: {
+            labels: ["Python", "JavaScript", "SQL", "Node.js", "HTML & CSS", "Power BI", "AWS"],
+            datasets: [{
+                data: [70, 65, 60, 50, 80, 75, 55],
+                backgroundColor: ["#00ff99", "#ff5733", "#007bff", "#ffcc00", "#663399", "#ff9900", "#9900cc"]
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            animation: {
+                animateScale: true
+            }
+        }
+    });
+});
+
+function toggleTheme() {
+    document.body.classList.toggle('light-mode');
+    document.body.classList.toggle('dark-mode');
+
+    let isLightMode = document.body.classList.contains('light-mode');
+
+    localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+
+    // Cambiar el fondo de la portada según el tema
+    let heroSection = document.getElementById('hero');
+    heroSection.style.backgroundImage = isLightMode 
+        ? "url('img/Prueba3.gif')" 
+        : "url('img/Prueba4.gif')";
+}

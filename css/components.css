@@ -211,4 +211,15 @@ canvas {
     margin-bottom: 20px;
 }
 
+/* Cambiar color del correo */
+.contact-email {
+    color: white !important; /* Cambia el color a blanco */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Opcional: hace que el texto se vea más destacado */
+}
+
+/* Opcional: Cambia el color al pasar el mouse */
+.contact-email:hover {
+    color: var(--primary-color); /* Puedes usar el color principal de tu diseño */
+}
 

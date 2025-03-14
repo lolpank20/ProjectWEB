@@ -1,0 +1,116 @@
+/* ----- VARIABLES DE COLOR ----- */
+:root {
+    --primary-color: #00ff99;
+    --background-color: #0d0d0d;
+    --text-color: #ffffff;
+    --card-bg: #1a1a1a;
+    --title-color: #00ccff;
+}
+
+/* ----- MODO CLARO (NUEVO) ----- */
+.light-mode {
+    --background-color: #ffffff; /* Fondo blanco */
+    --text-color: #000000; /* Texto negro */
+    --card-bg: #f5f5f5; /* Fondo de tarjetas gris claro */
+    --title-color: #0055aa; /* Títulos azules */
+}
+
+/* Aplicar variables */
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* TITULOS */
+h1, h2, h3 {
+    color: var(--title-color);
+}
+
+/* TARJETAS */
+.card {
+    background: var(--card-bg);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0px 4px 10px rgba(0, 255, 153, 0.3);
+}
+
+/* BOTÓN DE MODO CLARO/OSCURO */
+.theme-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    color: black;
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+    background: #00cc88;
+}
+
+/* Ajuste en modo claro */
+.light-mode .theme-btn {
+    background: #222;
+    color: rgb(255, 255, 255);
+}
+
+.light-mode .theme-btn:hover {
+    background: black;
+}
+
+/* Ajustes para Modo Claro */
+.light-mode .card,
+.light-mode .about-container,
+.light-mode .experience-card {
+    background-color: rgb(255, 255, 255);
+    border-color: #00ccff;
+    color: black;
+}
+
+/* Ajustes para texto */
+.light-mode .contact-email {
+    color: black !important;
+}
+
+.light-mode .contact-email {
+    color: black !important;
+    font-weight: bold;
+}
+
+/* Fondo en Modo Oscuro */
+.dark-mode #hero {
+    background: url('../img/Prueba3.gif') no-repeat center center/cover;
+}
+
+/* Fondo en Modo Claro */
+.light-mode #hero {
+    background: url('../img/Prueba4.gif') no-repeat center center/cover;
+}
+
+/* Modo Claro - Corrección de color de texto */
+.light-mode {
+    --text-color: #000000; /* Letras negras */
+    --card-bg: #ffffff;  /* Fondo blanco */
+    --title-color: #007bff; 
+}
+
+/* Aplicar color negro a los textos en modo claro */
+.light-mode p, 
+.light-mode h2, 
+.light-mode h3, 
+.light-mode span {
+    color: var(--text-color);
+}

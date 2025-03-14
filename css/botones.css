@@ -1,0 +1,47 @@
+/* ----- ESTILOS GENERALES ----- */
+:root {
+    --primary-color: #00ff99;
+    --background-color: #0d0d0d;
+    --text-color: #ffffff;
+    --card-bg: #1a1a1a;
+    --title-color: #00ccff;
+}
+
+/* ----- BOTÓN DE CAMBIO DE MODO ----- */
+.theme-btn {
+    position: fixed;
+    bottom: 80px;
+    left: 20px;  /* 🔥 Mueve el botón a la izquierda */
+    background: var(--primary-color);
+    color: black;
+    border: none;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+/* Efecto al pasar el mouse */
+.theme-btn:hover {
+    transform: scale(1.1);
+    background: #00cc88;
+}
+
+/* MODO CLARO */
+.light-mode .theme-btn {
+    background: #222;
+    color: white;
+}
+
+.light-mode .theme-btn:hover {
+    background: black;
+}

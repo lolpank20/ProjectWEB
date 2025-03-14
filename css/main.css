@@ -1,3 +1,67 @@
 @import url("base.css");
 @import url("layout.css");
 @import url("components.css");
+
+/* ----- Variables Generales ----- */
+:root {
+    --primary-color: #00ff99;
+    --background-color: #0d0d0d;
+    --text-color: #ffffff;
+    --card-bg: #1a1a1a;
+    --title-color: #00ccff;
+}
+
+/* Modo Claro */
+.light-mode {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --card-bg: #f0f0f0;
+    --title-color: #003366;
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.4s ease;
+}
+
+h2 {
+    color: var(--title-color);
+}
+
+/* Tarjetas */
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 255, 153, 0.3);
+}
+
+/* Botón de cambio de tema */
+.theme-btn {
+    position: fixed;
+    bottom: 60px;
+    left: 20px;
+    background: var(--primary-color);
+    border: none;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Gráficos */
+.skills-container {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.pie-chart-container {
+    display: none;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+}
