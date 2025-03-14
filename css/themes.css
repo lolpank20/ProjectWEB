@@ -12,7 +12,7 @@
     --background-color: #ffffff; /* Fondo blanco */
     --text-color: #000000; /* Texto negro */
     --card-bg: #f5f5f5; /* Fondo de tarjetas gris claro */
-    --title-color: #0055aa; /* Títulos azules */
+    --title-color: #2dd487; /* Títulos azules */
 }
 
 /* Aplicar variables */
@@ -27,12 +27,22 @@ h1, h2, h3 {
     color: var(--title-color);
 }
 
+
+#experience h2 {
+    margin-top: 280px; /* 🔽 Baja el título */
+}
+
+#experience h2 {
+    color: #00ff99; /* Verde neón */
+}
+
 /* TARJETAS */
 .card {
     background: var(--card-bg);
     border: 2px solid var(--primary-color);
     box-shadow: 0px 4px 10px rgba(0, 255, 153, 0.3);
 }
+
 
 /* BOTÓN DE MODO CLARO/OSCURO */
 .theme-btn {
@@ -76,7 +86,7 @@ h1, h2, h3 {
 .light-mode .about-container,
 .light-mode .experience-card {
     background-color: rgb(255, 255, 255);
-    border-color: #00ccff;
+    border-color: #11d88c;
     color: black;
 }
 
@@ -104,7 +114,7 @@ h1, h2, h3 {
 .light-mode {
     --text-color: #000000; /* Letras negras */
     --card-bg: #ffffff;  /* Fondo blanco */
-    --title-color: #007bff; 
+    --title-color: #0db863; 
 }
 
 /* Aplicar color negro a los textos en modo claro */
