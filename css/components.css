@@ -69,12 +69,13 @@
 .powerbi { width: 75%; }
 .aws { width: 55%; }
 
-/* ----- BOTONES DE REDES SOCIALES ----- */
+/* ----- BOTONES DE CONTACTO ----- */
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
 }
 
 .social-link {
@@ -84,16 +85,60 @@
     font-weight: bold;
     color: #000;
     background: var(--primary-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: inline-block;
     font-size: 1rem;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 255, 153, 0.3);
 }
 
-/* Efecto hover */
+/* Efectos de hover */
 .social-link:hover {
     transform: scale(1.1);
     box-shadow: 0 0 15px var(--primary-color);
-    background: #ffffff;
 }
+
+/* Estilos por cada red social */
+.linkedin { background: #0077B5; color: white; }
+.github { background: #333; color: white; }
+.whatsapp { background: #25D366; color: white; }
+.cv { background: #ff9900; color: white; }
+
+.linkedin:hover, .github:hover, .whatsapp:hover, .cv:hover {
+    opacity: 0.9;
+}
+
+
+/* ----- CONTENEDOR DE EXPERIENCIA ----- */
+.experience-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* ----- TARJETAS DE EXPERIENCIA ----- */
+.experience-card {
+    background: var(--dark-bg);
+    border: 2px solid var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 255, 153, 0.3);
+    max-width: 350px;
+    text-align: center;
+}
+
+.experience-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.experience-card p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+
