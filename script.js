@@ -83,23 +83,28 @@ document.addEventListener("DOMContentLoaded", function() {
                 backgroundColor: [
                     '#00FF99', '#FF5733', '#33B5E5', '#FFEB3B', '#4CAF50', '#FF9800', '#9C27B0'
                 ],
-                borderWidth: 2,
-                hoverOffset: 15 
+                borderWidth: 1, // 🔥 Reduce el grosor de los bordes
+                hoverOffset: 5 // 🔥 Reduce el efecto al pasar el mouse
             }]
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false,
+            maintainAspectRatio: false,  // 🔥 Permite que el CSS controle el tamaño
             plugins: {
                 legend: {
                     position: 'bottom',
                     labels: {
-                        color: 'white'
+                        color: 'white',
+                        font: {
+                            size: 10  // 🔥 Hace las etiquetas más pequeñas
+                        }
                     }
                 }
             },
-            animation: {
-                animateScale: true
+            layout: {
+                padding: {
+                    left: 5, right: 5, top: 5, bottom: 5
+                }
             }
         }
     });
@@ -242,23 +247,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Configuración del gráfico de pastel
-    const ctx = document.getElementById("skillsChart").getContext("2d");
-    new Chart(ctx, {
-        type: "pie",
-        data: {
-            labels: ["Python", "JavaScript", "SQL", "Node.js", "HTML & CSS", "Power BI", "AWS"],
-            datasets: [{
-                data: [70, 65, 60, 50, 80, 75, 55],
-                backgroundColor: ["#00ff99", "#ff5733", "#007bff", "#ffcc00", "#663399", "#ff9900", "#9900cc"]
-            }]
+    const ctx = document.getElementById('skillsChart').getContext('2d');
+const skillsChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ["Python", "JavaScript", "SQL", "Node.js", "HTML & CSS", "Power BI", "AWS"],
+        datasets: [{
+            data: [70, 65, 60, 50, 80, 75, 55],
+            backgroundColor: [
+                '#00FF99', '#FF5733', '#3399FF', '#FFD700', '#4CAF50', '#FFA500', '#9C27B0'
+            ]
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,  // Evita que se expanda demasiado
+        layout: {
+            padding: 20  // Reduce los espacios internos
         },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            animation: {
-                animateScale: true
+        plugins: {
+            legend: {
+                display: true,
+                position: 'bottom'
             }
         }
+    }
     });
 });
 

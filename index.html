@@ -51,12 +51,12 @@
     <section id="skills" class="content-section">
         <h2 id="skills-title">Habilidades Técnicas</h2>
 
-        <!-- Botones de Tabs -->
+        <!-- Contenedor de Barras -->
         <div class="tab-buttons">
             <button class="tab-btn active" onclick="showTab('bars')">Barras</button>
             <button class="tab-btn" onclick="showTab('chart')">Gráfico</button>
         </div>
-
+        
         <!-- Contenedor de Barras -->
         <div id="bars" class="tab-content active">
             <div class="skills-container">
@@ -69,12 +69,13 @@
                 <div class="skill"><p>AWS <span>55%</span></p><div class="progress-bar"><div class="progress aws"></div></div></div>
             </div>
         </div>
-
-        <!-- Contenedor del Gráfico -->
+        
+        <!-- Contenedor del Gráfico Circular -->
         <div id="chart" class="tab-content">
-            <canvas id="skillsChart"></canvas>
+            <div class="chart-container">
+                <canvas id="skillsChart"></canvas>
+            </div>
         </div>
-    </section>
 
     <!-- Contacto -->
     <section id="contact" class="content-section">

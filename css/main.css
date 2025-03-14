@@ -65,3 +65,14 @@ h2 {
     padding: 20px;
     border-radius: 10px;
 }
+
+/* Ajustar el tamaño del gráfico */
+.chart-container {
+    width: 100%;  /* Para que respete el tamaño máximo */
+    max-width: 350px;  /* 🔥 Ajusta el tamaño máximo del gráfico */
+    height: 350px;  /* 🔥 Altura fija */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;  /* 🔥 Centrar */
+}

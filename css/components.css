@@ -223,3 +223,10 @@ canvas {
     color: var(--primary-color); /* Puedes usar el color principal de tu diseño */
 }
 
+.tab-content {
+    display: none; /* 🔥 Ocultar por defecto */
+}
+
+.tab-content.active {
+    display: block; /* 🔥 Mostrar solo el activo */
+}
