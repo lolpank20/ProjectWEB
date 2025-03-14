@@ -1,0 +1,140 @@
+/* ----- MENÚ DE NAVEGACIÓN FIJO ----- */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 10px 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+#navbar ul li {
+    display: inline;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1rem;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+#navbar ul li a:hover {
+    color: var(--text-color);
+}
+
+/* ----- SECCIONES ----- */
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* ----- SECCIÓN PORTADA CON IMAGEN DE FONDO ----- */
+#hero {
+    background: url('../img/background.jpg') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh; /* Ocupar toda la pantalla */
+}
+
+/* Capa oscura para mejorar legibilidad */
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Contenido del hero */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+#hero h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: #bbbbbb;
+}
+
+/* ----- SECCIÓN PORTADA CON IMAGEN DE FONDO ----- */
+#hero {
+    background: url('../img/ale.jpg') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Capa oscura para mejorar legibilidad */
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Contenedor principal del hero */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+/* Imagen de perfil en burbuja */
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-color);
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Texto en la portada */
+#hero h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: #bbbbbb;
+}

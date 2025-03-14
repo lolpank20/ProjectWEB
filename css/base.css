@@ -1,0 +1,16 @@
+/* ----- VARIABLES GLOBALES ----- */
+:root {
+    --primary-color: #00ff99; /* Verde neón */
+    --dark-bg: #0d0d0d; /* Fondo oscuro */
+    --text-color: #ffffff; /* Texto blanco */
+}
+
+/* ----- ESTILOS GENERALES ----- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--dark-bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
